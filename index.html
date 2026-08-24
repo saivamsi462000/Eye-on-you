@@ -81,6 +81,9 @@ header.nav{
 .nav-links{ display:flex; gap:22px; font-family:var(--font-mono); font-size:12px; letter-spacing:0.04em; color:var(--ink-soft); }
 .nav-links a{ text-decoration:none; }
 .nav-links a:hover{ color:var(--accent); }
+.nav-links button{ appearance:none; -webkit-appearance:none; background:none; border:none; padding:0; font:inherit; letter-spacing:inherit; color:inherit; cursor:pointer; }
+.nav-links button:hover{ color:var(--accent); }
+.nav-links button:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
 @media (max-width:860px){ .nav-links{ display:none; } }
 
 /* ============ HERO ============ */
@@ -97,6 +100,10 @@ header.nav{
   border:1px solid var(--line-strong); color:var(--ink-soft);
 }
 .tag-chip.primary{ border-color:var(--accent); color:var(--accent-deep); background:var(--accent-soft); }
+button.tag-chip{ appearance:none; -webkit-appearance:none; background:var(--bg-raised); cursor:pointer; transition:border-color .15s ease, color .15s ease, transform .15s ease; }
+button.tag-chip:hover{ border-color:var(--accent); color:var(--accent-deep); transform:translateY(-1px); }
+button.tag-chip:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+button.tag-chip.primary{ background:var(--accent-soft); }
 .hero-stats{ display:flex; gap:34px; }
 .hero-stat b{ display:block; font-family:var(--font-display); font-size:22px; }
 .hero-stat span{ font-family:var(--font-mono); font-size:11.5px; color:var(--ink-faint); letter-spacing:0.04em; text-transform:uppercase; }
@@ -141,7 +148,10 @@ input[type=range]{ width:100%; accent-color:var(--accent); height:4px; }
 .mode-strip{ display:grid; grid-template-columns:repeat(5,1fr); gap:14px; }
 @media (max-width:900px){ .mode-strip{ grid-template-columns:repeat(3,1fr); } }
 @media (max-width:560px){ .mode-strip{ grid-template-columns:repeat(2,1fr); } }
-.mode-card{ background:var(--bg-raised); border:1px solid var(--line); border-radius:14px; padding:18px; text-align:center; }
+.mode-card{ appearance:none; -webkit-appearance:none; font-family:inherit; color:inherit; background:var(--bg-raised); border:1px solid var(--line); border-radius:14px; padding:18px; text-align:center; cursor:pointer; transition:border-color .15s ease, transform .15s ease; }
+.mode-card:hover{ border-color:var(--line-strong); transform:translateY(-2px); }
+.mode-card:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+.mode-card.active{ border-color:var(--accent); }
 .mode-swatch{ width:100%; height:44px; border-radius:8px; margin-bottom:14px; border:1px solid var(--line-strong); }
 .mode-card h5{ font-family:var(--font-display); font-size:14.5px; margin-bottom:4px; }
 .mode-card span{ font-family:var(--font-mono); font-size:11px; color:var(--ink-faint); }
@@ -278,13 +288,13 @@ footer{ padding:48px 0 60px; }
       EYE ON YOU
     </div>
     <nav class="nav-links">
-      <a href="#concept">Concept</a>
-      <a href="#optics">Optics</a>
-      <a href="#hardware">Hardware</a>
-      <a href="#app">App</a>
-      <a href="#scenarios">Scenarios</a>
-      <a href="#privacy">Privacy</a>
-      <a href="#brand">Brand</a>
+      <button type="button" data-scroll="concept">Concept</button>
+      <button type="button" data-scroll="optics">Optics</button>
+      <button type="button" data-scroll="hardware">Hardware</button>
+      <button type="button" data-scroll="app">App</button>
+      <button type="button" data-scroll="scenarios">Scenarios</button>
+      <button type="button" data-scroll="privacy">Privacy</button>
+      <button type="button" data-scroll="brand">Brand</button>
     </nav>
   </div>
 </header>
@@ -296,10 +306,10 @@ footer{ padding:48px 0 60px; }
       <h1>One pair of glasses.<br><em>Every</em> vision need.</h1>
       <p class="hero-sub">EYE ON YOU replaces the four pairs on your desk — prescription, reading, computer, and sun — with one frame that adjusts its own optics through the day, and hands you the controls when you want them.</p>
       <div class="tagline-row">
-        <span class="tag-chip primary">One Vision. Every Moment.</span>
-        <span class="tag-chip">Adaptive optical lenses</span>
-        <span class="tag-chip">Photochromic tint control</span>
-        <span class="tag-chip">Comfort Profile AI</span>
+        <button type="button" class="tag-chip primary" data-scroll="brand">One Vision. Every Moment.</button>
+        <button type="button" class="tag-chip" data-scroll="optics">Adaptive optical lenses</button>
+        <button type="button" class="tag-chip" data-scroll="sun">Photochromic tint control</button>
+        <button type="button" class="tag-chip" data-scroll="comfort">Comfort Profile AI</button>
       </div>
       <div class="hero-stats">
         <div class="hero-stat"><b>5</b><span>Frame styles</span></div>
@@ -438,11 +448,11 @@ footer{ padding:48px 0 60px; }
     </div>
 
     <div class="mode-strip" style="margin-top:32px;">
-      <div class="mode-card"><div class="mode-swatch" style="background:var(--tint-clear);"></div><h5>Indoor</h5><span>Clear · 0% tint</span></div>
-      <div class="mode-card"><div class="mode-swatch" style="background:var(--tint-light);"></div><h5>Outdoor, normal</h5><span>Light tint · 25%</span></div>
-      <div class="mode-card"><div class="mode-swatch" style="background:var(--tint-sun);"></div><h5>Bright sunlight</h5><span>Dark sunglasses · 85%</span></div>
-      <div class="mode-card"><div class="mode-swatch" style="background:var(--tint-drive);"></div><h5>Driving</h5><span>Anti-glare optimized · 55%</span></div>
-      <div class="mode-card"><div class="mode-swatch" style="background:var(--tint-night);"></div><h5>Night</h5><span>Clear, low-light · 0%</span></div>
+      <button type="button" class="mode-card" data-tint-var="--tint-clear" data-label="Indoor" data-pct="0% tint" data-slider="4"><div class="mode-swatch" style="background:var(--tint-clear);"></div><h5>Indoor</h5><span>Clear · 0% tint</span></button>
+      <button type="button" class="mode-card" data-tint-var="--tint-light" data-label="Outdoor, normal" data-pct="25% tint" data-slider="27"><div class="mode-swatch" style="background:var(--tint-light);"></div><h5>Outdoor, normal</h5><span>Light tint · 25%</span></button>
+      <button type="button" class="mode-card" data-tint-var="--tint-sun" data-label="Bright sunlight" data-pct="85% tint" data-slider="84"><div class="mode-swatch" style="background:var(--tint-sun);"></div><h5>Bright sunlight</h5><span>Dark sunglasses · 85%</span></button>
+      <button type="button" class="mode-card" data-tint-var="--tint-drive" data-label="Driving" data-pct="Anti-glare · 55%" data-slider="55"><div class="mode-swatch" style="background:var(--tint-drive);"></div><h5>Driving</h5><span>Anti-glare optimized · 55%</span></button>
+      <button type="button" class="mode-card" data-tint-var="--tint-night" data-label="Night" data-pct="Clear, low-light · 0%" data-slider="0"><div class="mode-swatch" style="background:var(--tint-night);"></div><h5>Night</h5><span>Clear, low-light · 0%</span></button>
     </div>
     <p style="margin-top:20px; font-size:13.5px;">Designed to read as ordinary premium eyewear at every tint state — no visible LCD panel, no goggle-like housing, just the lens itself darkening the way photochromic glass already does today, but under active electronic control.</p>
   </div>
@@ -935,10 +945,39 @@ footer{ padding:48px 0 60px; }
     if(envLabel) envLabel.textContent = labels[idx];
     if(pctLabel) pctLabel.textContent = pcts[idx] + '% tint level';
   }
+  var modeCards = document.querySelectorAll('.mode-card');
+
+  function clearActiveCards(){
+    modeCards.forEach(function(c){ c.classList.remove('active'); });
+  }
+
   if(slider){
     update(slider.value);
-    slider.addEventListener('input', function(){ update(this.value); });
+    slider.addEventListener('input', function(){ update(this.value); clearActiveCards(); });
   }
+
+  modeCards.forEach(function(card){
+    card.addEventListener('click', function(){
+      var varName = card.getAttribute('data-tint-var');
+      var color = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
+      if(lensL) lensL.setAttribute('fill', color);
+      if(lensR) lensR.setAttribute('fill', color);
+      if(envLabel) envLabel.textContent = card.getAttribute('data-label');
+      if(pctLabel) pctLabel.textContent = card.getAttribute('data-pct');
+      if(slider) slider.value = card.getAttribute('data-slider');
+      clearActiveCards();
+      card.classList.add('active');
+      var demo = document.querySelector('.tint-demo');
+      if(demo) demo.scrollIntoView({behavior:'smooth', block:'center'});
+    });
+  });
+
+  document.querySelectorAll('[data-scroll]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var target = document.getElementById(btn.getAttribute('data-scroll'));
+      if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
 
   var reveals = document.querySelectorAll('.container');
   if('IntersectionObserver' in window){

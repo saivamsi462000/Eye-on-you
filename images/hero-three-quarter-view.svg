@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300"><style>
+.bp{ color:#1C1E22; }
+.stroke{ fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.stroke-soft{ fill:none; stroke:#8A8E93; stroke-width:1; stroke-dasharray:2 4; }
+.fill-body{ fill:#EBE8E2; stroke:currentColor; stroke-width:1.6; }
+.fill-accent{ fill:#B8703A; opacity:0.85; }
+.lead{ stroke:#C7C2B8; stroke-width:1; fill:none; }
+text{ font-family:'JetBrains Mono', 'SF Mono', Menlo, monospace; fill:#8A8E93; }
+.label-strong{ fill:#54595F; font-weight:500; }
+</style><rect x="0" y="0" width="560" height="300" fill="#FFFFFF"/><g class="bp">
+          <ellipse cx="280" cy="256" rx="178" ry="14" fill="#EBE8E2"/>
+          <g transform="translate(28,56)">
+            <path class="lead" d="M108 40 L38 12"/>
+            <path class="lead" d="M330 46 L400 16"/>
+            <path class="lead" d="M420 96 L470 96"/>
+            <text x="0" y="8" font-size="10">ADAPTIVE LENS</text>
+            <text x="372" y="12" font-size="10">SENSOR ARRAY</text>
+            <text x="425" y="92" font-size="10">HINGE + BATTERY</text>
+
+            <rect x="30" y="30" width="150" height="106" rx="46" class="fill-body"/>
+            <rect x="200" y="24" width="158" height="112" rx="48" class="fill-body"/>
+            <path class="stroke" d="M180 78 Q190 68 200 78"/>
+            <path class="stroke" d="M30 78 L-24 46"/>
+            <path class="stroke" d="M358 76 L414 44"/>
+            <path class="stroke" d="M414 44 Q446 62 444 96 Q443 118 428 128"/>
+            <rect x="410" y="82" width="30" height="16" rx="5" class="fill-accent"/>
+            <circle cx="440" cy="100" r="2.6" class="fill-accent"/>
+          </g>
+        </g></svg>

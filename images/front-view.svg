@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160"><style>
+.bp{ color:#1C1E22; }
+.stroke{ fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.stroke-soft{ fill:none; stroke:#8A8E93; stroke-width:1; stroke-dasharray:2 4; }
+.fill-body{ fill:#EBE8E2; stroke:currentColor; stroke-width:1.6; }
+.fill-accent{ fill:#B8703A; opacity:0.85; }
+.lead{ stroke:#C7C2B8; stroke-width:1; fill:none; }
+text{ font-family:'JetBrains Mono', 'SF Mono', Menlo, monospace; fill:#8A8E93; }
+.label-strong{ fill:#54595F; font-weight:500; }
+</style><rect x="0" y="0" width="420" height="160" fill="#FFFFFF"/><g class="bp">
+            <g transform="translate(20,26)">
+              <rect x="14" y="12" width="150" height="96" rx="42" class="fill-body"/>
+              <rect x="212" y="12" width="150" height="96" rx="42" class="fill-body"/>
+              <path class="stroke" d="M164 52 Q188 40 212 52"/>
+              <path class="stroke" d="M14 56 L-10 40" stroke-width="1.4"/>
+              <path class="stroke" d="M362 56 L386 40" stroke-width="1.4"/>
+            </g>
+          </g></svg>

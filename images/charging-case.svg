@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 220"><style>
+.bp{ color:#1C1E22; }
+.stroke{ fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.stroke-soft{ fill:none; stroke:#8A8E93; stroke-width:1; stroke-dasharray:2 4; }
+.fill-body{ fill:#EBE8E2; stroke:currentColor; stroke-width:1.6; }
+.fill-accent{ fill:#B8703A; opacity:0.85; }
+.lead{ stroke:#C7C2B8; stroke-width:1; fill:none; }
+text{ font-family:'JetBrains Mono', 'SF Mono', Menlo, monospace; fill:#8A8E93; }
+.label-strong{ fill:#54595F; font-weight:500; }
+</style><rect x="0" y="0" width="340" height="220" fill="#FFFFFF"/><g class="bp">
+          <rect x="30" y="30" width="280" height="160" rx="30" class="fill-body"/>
+          <rect x="46" y="46" width="248" height="128" rx="20" fill="#F5F4F1" stroke="#C7C2B8" stroke-width="1"/>
+          <g transform="translate(75,88)">
+            <path class="fill-body" d="M0 22 Q0 8 30 6 Q60 4 60 22 Q60 40 30 40 Q0 40 0 22 Z"/>
+            <path class="fill-body" d="M90 22 Q90 8 120 6 Q150 4 150 22 Q150 40 120 40 Q90 40 90 22 Z"/>
+            <path class="stroke" d="M60 20 Q75 14 90 20"/>
+            <path class="stroke" d="M0 24 L-16 30" stroke-width="1.4"/>
+            <path class="stroke" d="M150 24 L166 30" stroke-width="1.4"/>
+          </g>
+          <circle cx="70" cy="200" r="3" class="fill-accent"/>
+          <circle cx="85" cy="200" r="3" fill="#C7C2B8"/>
+          <circle cx="100" cy="200" r="3" fill="#C7C2B8"/>
+          <text x="115" y="204" font-size="10">CHARGE STATUS</text>
+          <text x="255" y="204" font-size="10">USB-C</text>
+          <rect x="290" y="195" width="16" height="10" rx="2" class="stroke"/>
+        </g></svg>
